@@ -90,4 +90,9 @@ public class Job {
         return Objects.hash(id, name, employer, location, positionType, coreCompetency);
     }
 
+    @Override
+    public String toString() {
+        return "\nID:  " + getId() + "\nName:  " + getName() + "\nEmployer:  " + getEmployer() + "\nLocation:  " + getLocation() + "\nPosition Type:  " + getPositionType() + "\nCore Competency:  " + getCoreCompetency() + "\n";
+    }
+
 }

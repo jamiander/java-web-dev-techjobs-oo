@@ -7,7 +7,7 @@ import org.launchcode.techjobs_oo.*;
 
 public class JobTest {
     Job test_job1;
-    String name1 = "Junior-Dev";
+    String name1 = "";
     Employer employer1 = new Employer("Alice");
     Location location1 = new Location("Savannah");
     PositionType positionType1 = new PositionType("Web-Dev");
@@ -55,6 +55,17 @@ public class JobTest {
     @Test
     public void testJobsForEquality() {
         assertNotEquals(test_job2, test_job3);
+    }
+
+    @Test
+    public void testToStringBlankLines() {
+        assertTrue(test_job1.toString().startsWith("\n"));
+        assertTrue(test_job1.toString().endsWith("\n"));
+    }
+
+    @Test
+    public void testLabelsAndLines() {
+        assertTrue();
     }
 
 
