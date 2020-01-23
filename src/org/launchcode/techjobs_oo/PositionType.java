@@ -19,10 +19,6 @@ public class PositionType {
 
     @Override
     public String toString() { return value; }
-    // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
-    //  their id fields match.
-
-    // Getters and Setters:
 
     public int getId() {
         return id;
