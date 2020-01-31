@@ -5,7 +5,7 @@ import java.util.Objects;
 public class PositionType {
     private int id;
     private static int nextId = 1;
-    private String value;
+    private String value = "Data not available";
 
     public PositionType() {
         id = nextId;

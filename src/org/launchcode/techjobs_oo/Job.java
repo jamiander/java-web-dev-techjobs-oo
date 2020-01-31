@@ -1,5 +1,6 @@
 package org.launchcode.techjobs_oo;
 
+import java.lang.reflect.Field;
 import java.util.Objects;
 
 public class Job {
@@ -7,7 +8,7 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
-    private String name;
+    private String name = "Data not available";
     private Employer employer;
     private Location location;
     private PositionType positionType;
@@ -92,7 +93,11 @@ public class Job {
 
     @Override
     public String toString() {
-        return "\nID:  " + getId() + "\nName:  " + getName() + "\nEmployer:  " + getEmployer() + "\nLocation:  " + getLocation() + "\nPosition Type:  " + getPositionType() + "\nCore Competency:  " + getCoreCompetency() + "\n";
+        if (this.getClass() == null) {
+            return "OOPS! This job does not seem to exist.";
+        } else {
+            return "\nID:  " + getId() + "\nName:  " + getName() + "\nEmployer:  " + getEmployer() + "\nLocation:  " + getLocation() + "\nPosition Type:  " + getPositionType() + "\nCore Competency:  " + getCoreCompetency() + "\n";
+        }
     }
 
 }

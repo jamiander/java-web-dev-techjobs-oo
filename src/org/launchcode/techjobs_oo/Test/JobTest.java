@@ -65,8 +65,29 @@ public class JobTest {
 
     @Test
     public void testLabelsAndLines() {
-        assertTrue();
+        String expected = "\nID:  " + test_job1.getId() + "\nName:  " + test_job1.getName() + "\nEmployer:  " + test_job1.getEmployer() + "\nLocation:  " + test_job1.getLocation() + "\nPosition Type:  " + test_job1.getPositionType() + "\nCore Competency:  " + test_job1.getCoreCompetency() + "\n";
+        assertEquals(test_job1.toString(), expected);
     }
 
+    @Test
+    public void testBlankField() {
+        if (test_job1.getName() == null) {
+            String expected = "\nID: " + test_job1.getId() + "\nName:  " + "Data not available" + "\nEmployer:  " + test_job1.getEmployer() + "\nLocation:  " + test_job1.getLocation() + "\nPosition Type:  " + test_job1.getPositionType() + "\nCore Competency:  " + test_job1.getCoreCompetency() + "\n";
+            assertEquals(test_job1.toString(), expected);
+        }
+        if (test_job1.getEmployer() == null) {
+            String expected = "\nID:  " + test_job1.getId() + "\nName:  " + test_job1.getName() + "\nEmployer:  " + "Data not available" + "\nLocation:  " + test_job1.getLocation() + "\nPosition Type:  " + test_job1.getPositionType() + "\nCore Competency:  " + test_job1.getCoreCompetency() + "\n";
+            assertEquals(test_job1.toString(), expected);
+        }
+    }
 
+    @Test
+    public void ifJobInfoIsBlank() {
+        if (test_job1 == null) {
+            String expected = "OOPS! This job does not seem to exist.";
+            assertEquals(test_job1.toString(), expected);
+
+        }
+    }
 }
+
