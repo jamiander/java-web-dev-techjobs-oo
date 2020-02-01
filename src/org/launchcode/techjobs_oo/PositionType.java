@@ -2,22 +2,23 @@ package org.launchcode.techjobs_oo;
 
 import java.util.Objects;
 
-public class PositionType {
-    private int id;
+public class PositionType extends JobField {
+    /*private int id;
     private static int nextId = 1;
-    private String value = "Data not available";
+    private String value = "Data not available";*/
 
-    public PositionType() {
+    /*public PositionType() {
         id = nextId;
         nextId++;
-    }
+    }*/
 
     public PositionType(String value) {
-        this();
-        this.value = value;
+        /*this();
+        this.value = value;*/
+        super(value);
     }
 
-    @Override
+    /*@Override
     public String toString() { return value; }
 
     public int getId() {
@@ -44,5 +45,5 @@ public class PositionType {
     @Override
     public int hashCode() {
         return Objects.hash(id, value);
-    }
+    }*/
 }
